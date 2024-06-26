@@ -10,7 +10,7 @@ import java.sql.SQLException;
 //public class Conexao {
  //   public static void main(String[] args) {
   //      AutorDAO autorDAO = new AutorDAO();
-  //      String a = "zezinho";
+  //      Sting a = "zezinho";
   //      System.out.println(autorDAO.adicionarAutor());;
   //  }
 //}
