@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Livro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group textarea {
+            width: calc(100% - 12px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            font-weight: bold;
+            display: block;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group select {
+            width: 100%;
+        }
+        .form-group textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        .inline-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .inline-group .form-group {
+            width: 48%;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn-container .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 10px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn:hover {
+            background-color: #007bff;
+        }
+        .btn-save {
+            background-color: #007bff;
+        }
+        .btn-cancel {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Editar Livro</h1>
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Digite o título do livro" required>
+        </div>
+        <div class="form-group">
+            <label for="autor">Autor:</label>
+            <select id="autor" name="autor" placeholder="Escolha um autor" required>
+                <option value="" disabled selected>Selecione um autor</option>
+                <option value="Charles Dickens">Charles Dickens</option>
+                <option value="Jane Austen">Jane Austen</option>
+                <option value="Joanne Rowling">Joanne Rowling</option>
+                <option value="José de Alencar">José de Alencar</option>
+                <option value="William Shakespeare">William Shakespeare</option>
+            </select>
+        </div>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="edicao">Edição:</label>
+                <input type="text" id="edicao" name="edicao" placeholder="Digite a edição do livro">
+            </div>
+            <div class="form-group">
+                <label for="numero_paginas">Número de Páginas:</label>
+                <input type="number" id="numero_paginas" name="numero_paginas" min="1" placeholder="Digite o número de páginas" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="categoria1">Grupo de Precificação:</label>
+            <select id="categoria1" name="categoria1">
+                <option value="" disabled selected>Selecione um grupo</option>
+                <option value="Aventuras">Aventuras</option>
+                <option value="Romance">Romance</option>
+                <option value="Ficção Científica">Ficção Científica</option>
+                <option value="Biografia">Biografia</option>
+                <option value="Crônicas">Crônicas</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="sinopse">Sinopse:</label>
+            <textarea id="sinopse" name="sinopse" rows="5" placeholder="Digite a sinopse do livro"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="ano_publicacao">Ano de Publicação:</label>
+            <input type="number" id="ano_publicacao" name="ano_publicacao" min="1000" max="9999" placeholder="Digite o ano de publicação" required>
+        </div>
+        <div class="form-group">
+            <label for="isbn">ISBN:</label>
+            <input type="text" id="isbn" name="isbn" placeholder="Digite o ISBN do livro">
+        </div>
+        <div class="form-group">
+            <label for="codigo_barras">Código de Barras:</label>
+            <input type="text" id="codigo_barras" name="codigo_barras" placeholder="Digite o código de barras do livro">
+        </div>
+        <div class="form-group">
+            <label for="valor_aquisicao">Valor de Aquisição:</label>
+            <input type="number" id="valor_aquisicao" name="valor_aquisicao" min="0" step="0.01" placeholder="Digite o valor de aquisição do livro">
+        </div>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="altura" min="0" step="0.01" placeholder="Digite a altura do livro">
+            </div>
+            <div class="form-group">
+                <label for="largura">Largura (cm):</label>
+                <input type="number" id="largura" name="largura" min="0" step="0.01" placeholder="Digite a largura do livro">
+            </div>
+        </div>
+        <div class="inline-group">
+            <div class="form-group">
+                <label for="profundidade">Profundidade (cm):</label>
+                <input type="number" id="profundidade" name="profundidade" min="0" step="0.01" placeholder="Digite a profundidade do livro">
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso" min="0" step="0.01" placeholder="Digite o peso do livro">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="fornecedor">Fornecedor:</label>
+            <input type="text" id="fornecedor" name="fornecedor" placeholder="Digite o fornecedor do livro">
+        </div>
+        <div class="form-group">
+            <label for="grupo_precificacao">Grupo de Precificação:</label>
+            <select id="grupo_precificacao" name="grupo_precificacao">
+                <option value="1">Diamante</option>
+                <option value="2">Ouro</option>
+                <option value="3">Prata</option>
+                <option value="4">Bronze</option>
+            </select>
+        </div>
+        <div class="btn-container">
+            <a href="#" class="btn btn-cancel" onclick="history.go(-1); return false;">Cancelar</a>
+            <button type="submit" class="btn btn-save">Salvar</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

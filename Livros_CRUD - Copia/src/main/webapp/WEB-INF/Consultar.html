@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type=text] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .search-container button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-left: 10px;
+            min-width: 100px; /* Tamanho mínimo definido para o botão Cadastrar */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: left; /* Alinhamento do texto à esquerda */
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        .btn-edit {
+            background-color: #ffc107;
+        }
+        .btn-delete {
+            background-color: #dc3545;
+        }
+        .btn-register {
+            float: right;
+            min-width: 100px; /* Tamanho mínimo definido para o botão Cadastrar */
+        }
+        .btn-container {
+            text-align: right;
+        }
+        .action-buttons {
+            display: flex;
+        }
+        .action-buttons a {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>CRUD de Livros <a href="cadastrar.html" class="btn btn-register">Cadastrar</a></h1>
+    <div class="search-container">
+        <input type="text" id="search" name="search" placeholder="Consultar livro">
+        <button type="button" class="btn">Consultar</button>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Título</th>
+            <th>Autor(es)</th>
+            <th>Editora</th>
+            <th>Edição</th>
+            <th>Ano de Publicação</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Senhora</td>
+            <td>José de Alencar</td>
+            <td>Principes</td>
+            <td>2ª</td>
+            <td>1997</td>
+            <td class="action-buttons">
+                <a href="editar.html" class="btn btn-edit">Editar</a>
+                <a href="excluir.html" class="btn btn-delete">Excluir</a>
+            </td>
+        </tr>
+        <tr>
+            <td>O Guarani</td>
+            <td>José de Alencar</td>
+            <td>Principes</td>
+            <td>2ª</td>
+            <td>1999</td>
+            <td class="action-buttons">
+                <a href="editar.html" class="btn btn-edit">Editar</a>
+                <a href="excluir.html" class="btn btn-delete">Excluir</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Amor de perdição</td>
+            <td>Camilo Castelo Branco</td>
+            <td>Intrínseca</td>
+            <td>1ª</td>
+            <td>1980</td>
+            <td class="action-buttons">
+                <a href="editar.html" class="btn btn-edit">Editar</a>
+                <a href="excluir.html" class="btn btn-delete">Excluir</a>
+            </td>
+        </tr>
+        <tr>
+            <td>O apanhador no campo de centeio</td>
+            <td>J. D. Salinger</td>
+            <td>Todavia</td>
+            <td>5ª</td>
+            <td>2010</td>
+            <td class="action-buttons">
+                <a href="editar.html" class="btn btn-edit">Editar</a>
+                <a href="excluir.html" class="btn btn-delete">Excluir</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Harry Potter e a Pedra Filosofal</td>
+            <td>J.K. Rowling</td>
+            <td>Rocco</td>
+            <td>3ª</td>
+            <td>2001</td>
+            <td class="action-buttons">
+                <a href="editar.html" class="btn btn-edit">Editar</a>
+                <a href="excluir.html" class="btn btn-delete">Excluir</a>
+            </td>
+        </tr>
+
+
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
